@@ -11,14 +11,14 @@ start {
 }
 
 isLoading {
-	return current.inGameExclLoads > current.inGameInclLoads;
+    return current.inGameExclLoads > current.inGameInclLoads;
 }
 
 split {
-	if(current.levelFinished == 1)
-		return current.levelEndTimer >= 32828 && old.levelEndTimer < 32828;
-	else if(current.levelFinished == 2)
-		return current.levelEndTimer >= 32780 && old.levelEndTimer < 32780;
-	else
-		return false;
+    if(current.levelFinished == 1)
+        return current.levelEndTimer >= 32828 && old.levelEndTimer < 32828;
+    else if(current.levelFinished == 2)
+        return current.levelEndTimer >= 32780 && old.levelEndTimer < 32780;
+    else
+        return false;
 }
